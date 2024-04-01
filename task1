@@ -1,0 +1,31 @@
+verilen isiq rengine gore svetaforun isleme prinsipini simulasiya edin, sari gelse "Hazirlasin", qirmizi gelse "Dayanin",  yasil gelse "Hereket edin" cap olunsun
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Reng daxil edin");
+        String reng = scanner.next();
+
+
+        switch (reng) {
+            case "qirmizi":
+                System.out.println("dayanin");
+                break;
+            case "sari":
+                System.out.println("hazirlasin");
+                break;
+            case "yasil":
+                System.out.println("kecin");
+                break;
+            default:
+                System.out.println("duzgun rengi daxil edin");
+
+        }
+    }
+} 

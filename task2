@@ -1,0 +1,113 @@
+
+Kicik bir proqram yazin, proqram sizden valyuta, hedef valyuta , ve deyeri alsin, ve verilen valyutadan hedef valyutaya cevirib deyeri cap etsin, Meselen:
+
+valyuta: USD
+hedef valyuta: AZN
+deyer: 100
+cap olunacaq cavab: 170
+
+5 valyuta ucun yazsaniz kifayetdir: USD, EUR, AZN, GBR, TL
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Valyutani daxil edin");
+        String valyuta = scanner.next();
+        System.out.println("Hedef valyutani daxil edin");
+        String hedef = scanner.next();
+        System.out.println("Deyer daxil edin");
+        long deyer = scanner.nextLong();
+
+
+        switch (valyuta) {
+            case "usd":
+                switch (hedef) {
+                    case "azn":
+                        System.out.println(deyer * 1.70);
+                        break;
+                    case "euro":
+                        System.out.println(deyer * 0.93);
+                        break;
+                    case "tl":
+                        System.out.println(deyer * 32.37);
+                        break;
+                    case "gbp":
+                        System.out.println(deyer * 0.79);
+                        break;
+                }
+                    break;
+            case "azn":
+                switch (hedef) {
+                    case "usd":
+                        System.out.println(deyer * 0.59);
+                        break;
+                    case "euro":
+                        System.out.println(deyer * 0.54);
+                        break;
+                    case "tl":
+                        System.out.println(deyer * 19.04);
+                        break;
+                    case "gbp":
+                        System.out.println(deyer * 0.47);
+                        break;
+                }
+                     break;
+            case "tl":
+                switch (hedef) {
+                    case "usd":
+                        System.out.println(deyer * 0.031);
+                        break;
+                    case "euro":
+                        System.out.println(deyer * 0.029);
+                        break;
+                    case "azn":
+                        System.out.println(deyer * 0.053);
+                        break;
+                    case "gbp":
+                        System.out.println(deyer * 0.024);
+                        break;
+                }
+                       break;
+            case "euro":
+                switch (hedef) {
+                    case "usd":
+                        System.out.println(deyer * 1.08);
+                        break;
+                    case "tl":
+                        System.out.println(deyer * 34.96);
+                        break;
+                    case "azn":
+                        System.out.println(deyer * 1.84);
+                        break;
+                    case "gbp":
+                        System.out.println(deyer * 0.86);
+                        break;
+                }
+                    break;
+            case "gbp":
+                switch (hedef) {
+                    case "usd":
+                        System.out.println(deyer * 1.26);
+                        break;
+                    case "tl":
+                        System.out.println(deyer * 40.86);
+                        break;
+                    case "azn":
+                        System.out.println(deyer * 2.15);
+                        break;
+                    case "euro":
+                        System.out.println(deyer * 1.17);
+                        break;
+                }
+                      break;
+
+        }
+    }
+}
